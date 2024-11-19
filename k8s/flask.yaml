@@ -31,7 +31,7 @@ data:
       server {
         listen 5000;
         location / {
-          proxy_pass http://mysql-service:3300;
+          proxy_pass http://mysql:3306;
         }
       }
     }
