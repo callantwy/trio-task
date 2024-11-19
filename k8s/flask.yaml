@@ -18,7 +18,7 @@ spec:
       - name: flask-container
         image: callantwy/flask-app:latest
         ports:
-        - containerPort: 5500
+        - containerPort: 5000
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -29,7 +29,7 @@ data:
     events {}
     http {
       server {
-        listen 5500;
+        listen 5000;
         location / {
           proxy_pass http://mysql-service:3300;
         }
@@ -45,6 +45,6 @@ spec:
       app: flask 
     ports: 
     - protocol: TCP 
-      port: 5500 
-      targetPort: 5500 
+      port: 5000 
+      targetPort: 5000 
     type: ClusterIP
