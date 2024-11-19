@@ -17,7 +17,7 @@ spec:
       - name: mysql-container
         image: callantwy/dbapp:latest
         ports:
-        - containerPort: 3300
+        - containerPort: 3306
 ---
 apiVersion: v1 
 kind: Service 
@@ -28,6 +28,6 @@ spec:
       app: mysql 
     ports: 
     - protocol: TCP 
-      port: 3300 
-      targetPort: 3300 
+      port: 3306
+      targetPort: 3306 
     type: ClusterIP
