@@ -47,4 +47,4 @@ spec:
     - protocol: TCP 
       port: 5500 
       targetPort: 5500 
-    type: clusterIP
+    type: ClusterIP
